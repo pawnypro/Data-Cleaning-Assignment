@@ -11,31 +11,31 @@
 
 * Variable 564 to 581:
 Means and Standard Deviations of the accelerometer	and gyroscope readings (128 readings/window) were calculated. The readings along the X, Y and Z axes were picked up from the files available in “train/Inertial Signals/” folder. Variables are named as under:
- * "Mean_total_acc_x"                    
- * "SD_total_acc_x"
- * "Mean_total_acc_y"                    
- * "SD_total_acc_y"
- * "Mean_total_acc_z"                    
- * "SD_total_acc_z"
- * "Mean_body_acc_x"                     
- * "SD_body_acc_x"
- * "Mean_body_acc_y"                     
- * "SD_body_acc_y"
- * "Mean_body_acc_z"                     
- * "SD_body_acc_z"
- * "Mean_body_gyro_x"                    
- * "SD_body_gyro_x"
- * "Mean_body_gyro_y"                    
- * "SD_body_gyro_y"
- * "Mean_body_gyro_z"                    
- * "SD_body_gyro_z"                      
+ *"Mean_total_acc_x"                    
+ *"SD_total_acc_x"
+ *"Mean_total_acc_y"                    
+ *"SD_total_acc_y"
+ *"Mean_total_acc_z"                    
+ *"SD_total_acc_z"
+ *"Mean_body_acc_x"                     
+ *"SD_body_acc_x"
+ *"Mean_body_acc_y"                     
+ *"SD_body_acc_y"
+ *"Mean_body_acc_z"                     
+ *"SD_body_acc_z"
+ *"Mean_body_gyro_x"                    
+ *"SD_body_gyro_x"
+ *"Mean_body_gyro_y"                    
+ *"SD_body_gyro_y"
+ *"Mean_body_gyro_z"                    
+ *"SD_body_gyro_z"                      
 
-Mean_total_acc_x - mean of the acceleration readings from the smartphone accelerometer X axis in standard gravity units 'g'
+* Mean_total_acc_x - mean of the acceleration readings from the smartphone accelerometer X axis in standard gravity units 'g'
 SD_total_acc_x - standard deviation of the acceleration readings from the smartphone accelerometer X axis in standard gravity units 'g'
-Mean_body_acc_x - mean of the body acceleration readings obtained by subtracting the gravity from the total acceleration. 
+* Mean_body_acc_x - mean of the body acceleration readings obtained by subtracting the gravity from the total acceleration. 
 SD_body_acc_x - standard deviation of the body acceleration readings obtained by subtracting the gravity from the total acceleration. 
-Mean_body_gyro_x - mean of the angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
-SD_body_gyro_x - standard deviation of the angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+* Mean_body_gyro_x - mean of the angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+* SD_body_gyro_x - standard deviation of the angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
 Similar descriptions apply for the y and z axis as well.
 Each row corresponds to the averages off all these measurements for each activity and each subject.
