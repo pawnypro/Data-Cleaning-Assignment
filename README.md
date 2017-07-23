@@ -34,57 +34,39 @@ Similar files are available for test data.
 *'train/subject_train.txt'*
 
 ## Analysis Done
+Working directory must be set to "UCI HAR Dataset" folder.
 
 ### We merged the training and the test sets to create one data set.
-Parsed through the 
-Extracts only the measurements on the mean and standard deviation for each measurement.
-Uses descriptive activity names to name the activities in the data set
-Appropriately labels the data set with descriptive variable names.
-From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+We read the subject, activity and features data of the training and test datasets from the raw files listed above and then club the subject, activity and features together to form Training and test dataframes.
+Variables are appropriately named and the training and testing dataframes are combined together to form one complete dataframe, containing the SubjectID, the ActivityLabel and the 561 features for each observation.
+We order this dataframe by SubjectID
+
+### Extracts only the measurements on the mean and standard deviation for each measurement.
+We read the accelerometer and gyroscope readings across the x, y and z axes from the training and test datasets. Means and Standard Deviations of the accelerometer	and gyroscope readings (128 readings/window) are calculated and matched with the corresponding Subject to form a training and test measurements dataframes.
+The dataframes are appropriately named and combined together to form a new dataframe with measurement values of both the training and testing subjects.
+We order this dataframe by SubjectID
+
+Now we have 2 dataframes:
+1> Total_Features_DF - comprising of all 561 features for observations of all subjects across all activities (total 563 columns: 1 + 1 + 561)
+2> Total_Measurements_DF - comprising of the means and standard deviations of accelerometer and gyroscope readings for each subject (total 19 variables)
+Both dataframes are ordered by SubjectID, so we simply column bind the measurements to the features to form the Final DF
+Combining the 2 dataframes to get our final dataframe which shall be used for summarizing by SubjectID and ActivityLabel later.
+FinalDF is going to have 1 + 1 + 561 + 18 = 581 columns (SubjectID + ActivityLabel + 561 Features + 18 Measurements)
+We order the FinalDF first by SubjectID and then by ActivityLabel
 
 
+### Appropriately labels the data set with descriptive variable names.
+We name the feature variables from the list available in features.txt file, and use appropriate names for the measurement variables.
 
+### Uses descriptive activity names to name the activities in the data set
+We get the activity names from activity_labels.txt
 
+### From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+We loop through the SubjectIDs (1 to 30 subjects) in FinalDF and then for each subject we loop through the activities (1 - WALKING, 2 - WALKING_UPSTAIRS, 3 - WALKING_DOWNSTAIRS, 4 - SITTING, 5 - STANDING, 6 - LAYING), and find the average of all the variables in the FinalDF (column 3 to 581)
+A new dataframe newDF is created to hold this data.
 
+We then write the output to a .txt file.
 
-
-# Working directory must be set to "UCI HAR Dataset" folder.
-# Read the subject, activity and features data of the training dataset from the raw datasets
-# Club the subject, activity and features together to form one Training dataframe
-# Read the subject, activity and features data of the testing dataset from the raw datasets
-# Club the subject, activity and features together to form one Training dataframe
-# In order to name the variables of the training and testing dataframes created above, we read the list of features from 
-# features.txt file
-# Create a name vector for all the variable names in the traning and testing dataframes, and then assign the names.
-# Combine the training and testing dataframes together to form one complete dataframe, containing the SubjectID,
-# the ActivityLabel and the 561 features for each observation.
-# Order this dataframe by SubjectID
-# Load the matrixStats library to be able to use the rowSds function for calculating standard deviations of rows.
-# Read the accelerometer and gyroscope readings across the x, y and z axes from the training data
-# Means and Standard Deviations of the accelerometer	and gyroscope readings (128 readings/window) are calculated,
-# and matched with the corresponding Subject to form a training measurements dataframe
-# Read the accelerometer and gyroscope readings across the x, y and z axes from the testing data
-# Means and Standard Deviations of the accelerometer	and gyroscope readings (128 readings/window) are calculated,
-# and matched with the corresponding Subject to form a testing measurements dataframe
-# Create a names vector to assign appropriate names to the variables of the training and testing 
-# measurements dataframe
-# Assign the names to the training and testing dataframes
-# Combine the training and testing measurements dataframes to form a new dataframe with measurement 
-# values of both the training and testing subjects
-# Order this dataframe also by SubjectID
-# Now we have 2 dataframes:
-# 1> Total_Features_DF - comprising of all 561 features for observations of all subjects across all activities (total 563 columns)
-# 2> Total_Measurements_DF - comprising of the means and standard deviations of accelerometer and gyroscope readings for each subject (total 19 variables)
-# Both dataframes are ordered by SubjectID, so we simply column bind the measurements to the features to form the Final DF
-# Combining the 2 dataframes to get our final dataframe which shall be used for summarizing by SubjectID and ActivityLabel later.
-# FinalDF is going to have 1 + 1 + 561 + 18 = 581 columns (SubjectID + ActivityLabel + 561 Features + 18 Measurements)
-# We order the FinalDF first by SubjectID and then by ActivityLabel
-# Summarizing the FinalDF to get the average of all variables for each subject doing every activity
-# Loop through the SubjectIDs (1 to 30 subjects) and then for each subject we loop through the activities (1 - WALKING, 2 - WALKING_UPSTAIRS,
-# 3 - WALKING_DOWNSTAIRS, 4 - SITTING, 5 - STANDING, 6 - LAYING), and find the average of all the variables in the FinalDF (column 3 to 581)
-# a new dataframe newDF is created
-# Descriptive activity names are given to the codes as described in activity_labels.txt
-# We write out the new tidy dataset
 
 
 
