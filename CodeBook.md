@@ -11,7 +11,8 @@
 
 * Variable 564 to 581:
 Means and Standard Deviations of the accelerometer	and gyroscope readings (128 readings/window) were calculated. The readings along the X, Y and Z axes were picked up from the files available in “train/Inertial Signals/” folder. Variables are named as under:
- *"Mean_total_acc_x"
+
+ *"Mean_total_acc_x"*
  
  *"SD_total_acc_x"
  
