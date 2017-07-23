@@ -6,19 +6,29 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 ## Available data
 
-* Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+### Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 *'train/Inertial Signals/total_acc_x_train.txt':* The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the *'total_acc_x_train.txt'* and *'total_acc_z_train.txt'* files for the Y and Z axis.
+
 *'train/Inertial Signals/body_acc_x_train.txt':* The body acceleration signal obtained by subtracting the gravity from the total acceleration.
+
 Similar files are available for test data.
 
-* Triaxial Angular velocity from the gyroscope. 
-*'train/Inertial Signals/body_gyro_x_train.txt':* The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
-* A 561-feature vector with time and frequency domain variables. 
+### Triaxial Angular velocity from the gyroscope. 
+
+*'train/Inertial Signals/body_gyro_x_train.txt':* The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. Similar files available for the other 2 axes.
+
+### A 561-feature vector with time and frequency domain variables. 
+
 *'train/X_train.txt':* Training set.
+
 *'test/X_test.txt':* Test set.
-* Its activity label. 
+
+### Its activity label. 
+
 *'train/y_train.txt':* Training records
+
 *'train/y_test.txt':* Training records
 
-* An identifier of the subject who carried out the experiment.
+### An identifier of the subject who carried out the experiment.
+
 *'train/subject_train.txt'*
