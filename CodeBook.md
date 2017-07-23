@@ -49,9 +49,9 @@ Means and Standard Deviations of the accelerometer	and gyroscope readings (128 r
  *"SD_body_gyro_z"*
 
 * Mean_total_acc_x - mean of the acceleration readings from the smartphone accelerometer X axis in standard gravity units 'g'
-SD_total_acc_x - standard deviation of the acceleration readings from the smartphone accelerometer X axis in standard gravity units 'g'
+* SD_total_acc_x - standard deviation of the acceleration readings from the smartphone accelerometer X axis in standard gravity units 'g'
 * Mean_body_acc_x - mean of the body acceleration readings obtained by subtracting the gravity from the total acceleration. 
-SD_body_acc_x - standard deviation of the body acceleration readings obtained by subtracting the gravity from the total acceleration. 
+* SD_body_acc_x - standard deviation of the body acceleration readings obtained by subtracting the gravity from the total acceleration. 
 * Mean_body_gyro_x - mean of the angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 * SD_body_gyro_x - standard deviation of the angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
