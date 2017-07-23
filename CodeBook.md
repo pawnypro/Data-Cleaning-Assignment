@@ -13,22 +13,39 @@
 Means and Standard Deviations of the accelerometer	and gyroscope readings (128 readings/window) were calculated. The readings along the X, Y and Z axes were picked up from the files available in “train/Inertial Signals/” folder. Variables are named as under:
 
  *"Mean_total_acc_x"*
+ 
  *"SD_total_acc_x"*
+ 
  *"Mean_total_acc_y"*
+ 
  *"SD_total_acc_y"*
+ 
  *"Mean_total_acc_z"*
+ 
  *"SD_total_acc_z"*
+ 
  *"Mean_body_acc_x"*
+ 
  *"SD_body_acc_x"*
+ 
  *"Mean_body_acc_y"*
+ 
  *"SD_body_acc_y"*
+ 
  *"Mean_body_acc_z"*
+ 
  *"SD_body_acc_z"*
+ 
  *"Mean_body_gyro_x"*
+ 
  *"SD_body_gyro_x"*
+ 
  *"Mean_body_gyro_y"*
+ 
  *"SD_body_gyro_y"*
+ 
  *"Mean_body_gyro_z"*
+ 
  *"SD_body_gyro_z"*
 
 * Mean_total_acc_x - mean of the acceleration readings from the smartphone accelerometer X axis in standard gravity units 'g'
