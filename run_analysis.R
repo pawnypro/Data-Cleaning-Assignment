@@ -10,7 +10,7 @@ Train_DF <- data.frame(SubjectTrain[,1],YTrain[,1],XTrain)
 SubjectTest <- read.table("test/subject_test.txt", fill = TRUE, header= FALSE)
 YTest <- read.table("test/y_test.txt", fill = TRUE, header= FALSE)
 XTest <- read.table("test/X_test.txt", fill = TRUE, header= FALSE)
-# Club the subject, activity and features together to form one Training dataframe
+# Club the subject, activity and features together to form one Test dataframe
 Test_DF <- data.frame(SubjectTest[,1],YTest[,1],XTest)
 
 # In order to name the variables of the training and testing dataframes created above, we read the list of features from 
